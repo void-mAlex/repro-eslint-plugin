@@ -8,16 +8,11 @@ module.exports = {
 		sourceType: 'module',
 		requireConfigFile: false,
 		babelOptions: {
-			plugins: [
-				[require.resolve('decorator-transforms')],
-			],
+			plugins: [[require.resolve('decorator-transforms')]],
 		},
 	},
 	plugins: ['ember'],
-	extends: [
-		'eslint:recommended',
-		'plugin:ember/recommended',
-	],
+	extends: ['eslint:recommended', 'plugin:ember/recommended'],
 	env: {
 		browser: true,
 	},
@@ -47,9 +42,23 @@ module.exports = {
 			extends: ['plugin:n/recommended'],
 		},
 		{
+			files: ['**/*.gjs'],
+			parser: 'ember-eslint-parser',
+			plugins: ['ember'],
+			extends: [
+				'eslint:recommended',
+				'plugin:ember/recommended',
+				'plugin:ember/recommended-gjs',
+			],
+		},
+		{
 			// test files
-			files: ['tests/**/*-test.{js,ts}'],
-			extends: ['plugin:qunit/recommended'],
+			files: ['tests/**/*-test.{gjs,js,ts}'],
+			extends: [
+				'plugin:qunit/recommended',
+				'plugin:ember/recommended',
+				'plugin:ember/recommended-gjs',
+			],
 		},
 	],
 };
