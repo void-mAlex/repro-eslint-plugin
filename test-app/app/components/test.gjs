@@ -12,6 +12,7 @@ const LABEL_7 = '7';
 const LABEL_8 = '8';
 const LABEL_9 = '9';
 const LABEL_0 = '0';
+const MASK = 0x6;
 
 let counter = 0;
 
@@ -19,6 +20,12 @@ let counter = 0;
 function eq(a, b) {
 	// test comment2
 	return a === b;
+}
+function unpack(v) {
+	return {
+		op: v & MASK,
+		value: (v << MASK) | MASK,
+	};
 }
 
 console.log(css);
@@ -480,7 +487,6 @@ class FloatingClass6 extends Component {
 	</template>
 }
 
-
 class FloatingClass7 extends Component {
 	get label2() {
 		return LABEL_2;
@@ -768,7 +774,6 @@ class FloatingClass0 extends Component {
 		</div>
 	</template>
 }
-
 
 class FloatingClass11 extends Component {
 	get label2() {
@@ -1058,7 +1063,6 @@ class FloatingClass14 extends Component {
 	</template>
 }
 
-
 class FloatingClass15 extends Component {
 	get label2() {
 		return LABEL_2;
@@ -1346,7 +1350,6 @@ class FloatingClass18 extends Component {
 		</div>
 	</template>
 }
-
 
 class FloatingClass19 extends Component {
 	get label2() {
