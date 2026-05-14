@@ -1,6 +1,6 @@
 import { on } from '@ember/modifier';
 
-<template>
+const Test = <template>
 	<div {{on "click" this.test}}>
 		safe to ignore
 	</div>
@@ -8,3 +8,13 @@ import { on } from '@ember/modifier';
 		danger!!
 	</div>
 </template>
+
+
+export default class MyTest extends Component {
+	get label(){
+		return '';
+	}
+	<template>
+		<Test />
+	</template>
+}
