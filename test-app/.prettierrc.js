@@ -5,6 +5,7 @@ module.exports = {
 	singleQuote: true,
 	useTabs: true,
 	tabWidth: 4,
+	printWidth: 160,
 	overrides: [
 		{
 			files: '*.{js,ts,gjs,gts}',

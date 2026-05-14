@@ -42,7 +42,18 @@ class FloatingClass extends Component {
 	<template>
 		<div class="{{this.label2}}">
 
-			<Test />
+			<Test
+				@param1="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param2="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param3="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param4="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param5="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param6="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param7="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param8="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param9="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param0="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+			/>
 			<MyTest />
 		</div>
 	</template>
