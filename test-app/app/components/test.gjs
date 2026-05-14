@@ -28,6 +28,13 @@ function unpack(v) {
 	};
 }
 
+function unmask(v) {
+	return {
+		op: v & MASK,
+		value: v >>> MASK,
+	};
+}
+
 console.log(css);
 const Test = <template>
 	<div {{on "click" this.test}}>
