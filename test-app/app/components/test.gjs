@@ -70,7 +70,7 @@ class FloatingClass extends Component {
 		<div class="{{this.label2}}">
 
 			<Test
-				@param1="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
+				@param1="{{if (eq this.label2 'a') (if (eq this.label2 'b') (Object a="2") '3') (if (eq this.label2 'c') '4' '5')}}"
 				@param2="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
 				@param3="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
 				@param4="{{if (eq this.label2 'a') (if (eq this.label2 'b') '2' '3') (if (eq this.label2 'c') '4' '5')}}"
