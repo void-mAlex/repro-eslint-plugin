@@ -18,3 +18,16 @@ export default class MyTest extends Component {
 		<Test />
 	</template>
 }
+
+
+export class OtherTest extends Component {
+	get label(){
+		return '';
+	}
+	<template>
+		<Test />
+		<MyTest>
+			
+		</MyTest>
+	</template>
+}
